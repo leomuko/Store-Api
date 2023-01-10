@@ -11,8 +11,10 @@ const start = async() =>{
         await Product.deleteMany()
         await Product.create(jsonProducts)
         console.log("Successfully populated Database")
+        process.exit(0)
     }catch(error){
         console.log(error)
+        process.exit(1)
     }
 }
 
